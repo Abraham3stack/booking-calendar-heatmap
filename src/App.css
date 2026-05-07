@@ -1,0 +1,14 @@
+.app {
+  padding: 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1.1;
+  text-align: center;
+  word-break: keep-all;
+}
