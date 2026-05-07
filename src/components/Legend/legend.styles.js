@@ -12,6 +12,7 @@ export const styles = {
     fontSize: "1rem",
     fontWeight: "600",
     marginBottom: "1rem",
+    textAlign: "center"
   },
 
   legendContainer: {
