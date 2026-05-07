@@ -130,12 +130,18 @@ src/
 
 ---
 
+## Live Demo
+
+[Live Site] https://booking-calendar-heatmap-jade.vercel.app/
+
+---
+
 ## Installation
 
 Clone the repository:
 
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Abraham3stack/booking-calendar-heatmap
 ```
 
 Install dependencies:
