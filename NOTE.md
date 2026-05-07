@@ -22,6 +22,7 @@ The following optional features were implemented to extend the core assignment r
 
 - Responsive dashboard statistics
 - Responsive design improvements
+- Mobile touch drag support
 - Enhanced UX interactions and hover states
 - Empty, loading, and error states
 - Occupancy legend for heatmap readability
@@ -122,8 +123,9 @@ This logic was separated into utility files to improve readability and reusabili
 One of the main interactive features of the project is the drag-to-select functionality.
 
 Users can:
-- Click and drag across multiple dates
-- Select booking ranges dynamically
+- Click and drag across multiple dates on desktop
+- Drag-select dates using touch gestures on mobile devices
+- Select booking ranges dynamically in both forward and backward directions
 - Instantly see overlapping bookings and statistics
 
 Special attention was given to preventing accidental selections and drag bugs.
@@ -132,7 +134,8 @@ Improvements implemented include:
 - Disabling text selection while dragging
 - Better mouse release handling
 - Preventing unintended auto-selection issues
-- Smoother drag interactions
+- Smoother desktop and mobile drag interactions
+- Preventing accidental mobile scrolling during touch dragging
 
 ---
 
@@ -152,6 +155,7 @@ Responsive techniques used include:
 - Adaptive spacing
 - Responsive navigation controls
 - Wrapping occupancy legends
+- Mobile touch gesture support
 
 A hybrid styling approach was used:
 
@@ -194,6 +198,7 @@ This included:
 - Responsive header controls
 - Better legend wrapping
 - Improved mobile spacing
+- Supporting touch-based drag interactions without breaking desktop behavior
 
 ---
 

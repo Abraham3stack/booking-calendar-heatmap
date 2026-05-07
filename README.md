@@ -1,4 +1,3 @@
-
 # Booking Calendar Heatmap
 
 An interactive and responsive booking calendar heatmap built with React and Vite.
@@ -30,10 +29,11 @@ Different occupancy levels are represented with different colors:
 
 ## Drag-to-Select Date Range
 Users can:
-- Click and drag across dates
-- Select custom booking ranges
+- Click and drag across dates on desktop
+- Drag-select dates using touch gestures on mobile devices
+- Select custom booking ranges in both forward and backward directions
 - View selected range details instantly
-- Prevent accidental drag issues with improved mouse handling
+- Prevent accidental drag issues with improved mouse and touch handling
 
 ---
 
@@ -82,6 +82,8 @@ Responsive improvements include:
 - Flexible dashboard spacing
 - Mobile-friendly navigation controls
 - Responsive occupancy legend
+- Mobile touch drag support
+- Prevented accidental scrolling during mobile drag interactions
 
 ---
 
@@ -90,7 +92,7 @@ Additional UI/UX polish includes:
 
 - Hover effects
 - Smooth transitions
-- Drag interaction improvements
+- Improved desktop and mobile drag interactions
 - Disabled text selection during dragging
 - Responsive button scaling
 - Improved spacing and layout consistency
@@ -132,7 +134,7 @@ src/
 
 ## Live Demo
 
-[Live Site] https://booking-calendar-heatmap-jade.vercel.app/
+[Live Site](https://booking-calendar-heatmap-jade.vercel.app/)
 
 ---
 
