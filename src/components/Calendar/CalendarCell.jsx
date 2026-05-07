@@ -11,6 +11,7 @@ function CalendarCell({
 }) {
   return (
     <div
+      data-date={item.date.toISOString()}
       style={{
         ...styles.cell,
         backgroundColor,
@@ -27,6 +28,8 @@ function CalendarCell({
         cursor: "pointer",
         // Prevents accidental text highlighting while dragging across dates
         userSelect: "none",
+        // Prevents touch scrolling while dragging across calendar cells on mobile
+        touchAction: "none",
         transition: "all 0.18s ease, filter 0.18s ease, box-shadow 0.18s ease",
         // Adds a subtle highlight so selected ranges are easier to distinguish
         boxShadow: isSelected
@@ -39,6 +42,29 @@ function CalendarCell({
       onMouseDown={() => onMouseDown(item.date)}
       onMouseEnter={() => onMouseEnter(item.date)}
       onMouseUp={onMouseUp}
+      
+      // Touch support allows drag selection to work on mobile devices
+      onTouchStart={(e) => {
+        e.preventDefault();
+        onMouseDown(item.date);
+      }}
+      onTouchMove={(e) => {
+        e.preventDefault();
+
+        const touch = e.touches[0];
+
+        const element = document.elementFromPoint(
+          touch.clientX,
+          touch.clientY
+        );
+
+        const cell = element?.closest("[data-date]");
+
+        if (cell) {
+          onMouseEnter(new Date(cell.dataset.date));
+        }
+      }}
+      onTouchEnd={onMouseUp}
       // Stops the browser's default drag behavior from interfering with custom selection
       onDragStart={(e) => e.preventDefault()}
     >
